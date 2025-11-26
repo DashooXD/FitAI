@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - FitAI</title>
+    <meta name="description" content="Log in to your FitAI account.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        teal: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div id="root"></div>
+    
+    <!-- Shared Logic -->
+    <script type="text/babel" src="utils/auth.js" data-file="utils/auth.js"></script>
+    <script type="text/babel" src="utils/trickle-db.js" data-file="utils/trickle-db.js"></script>
+
+    <!-- Components -->
+    <script type="text/babel" src="components/Header.js" data-file="components/Header.js"></script>
+    <script type="text/babel" src="components/AIAssistant.js" data-file="components/AIAssistant.js"></script>
+    <script type="text/babel" src="components/ErrorBoundary.js" data-file="components/ErrorBoundary.js"></script>
+
+    <!-- Page Logic -->
+    <script type="text/babel" src="login-app.js" data-file="login-app.js"></script>
+</body>
+</html>
